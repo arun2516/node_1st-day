@@ -48,7 +48,7 @@ const service = {
            if(!ismatch) return res.sendStatus(403);
            
            // generate auth token
-           const authtoken = jwt.sign({ userid:user._id },process.env.JWT_SECRET);
+           const authtoken = jwt.sign({ userId:user._id },process.env.JWT_SECRET);
 
            res.send({message:"users logged in successfully",authtoken});
         }
